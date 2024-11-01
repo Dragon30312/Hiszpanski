@@ -5,7 +5,7 @@ export default function App() {
     const [irregularity,setIrregularity] = useState("0");
     return (
         <main className="bg-slate-950 w-screen min-h-screen mx-auto flex flex-col items-center">
-            <h1 className={"text-6xl text-white font-bold underline decoration-green-700 decoration-6 mt-10"}>Odmiana Czasowników:</h1>
+            <h1 className={"text-6xl text-white font-bold underline decoration-green-700 decoration-6 mt-10"}>Conjugación de verbos:</h1>
             <div>
                 <input onChange={e => setVerb(e.target.value)}
                        className="hover:scale-105 pl-2 bg-slate-900 mr-20 mt-20 h-16 w-80 text-white text-4xl focus:ring-8 focus:ring-green-700 transition-all duration-300 focus:rounded-xl"
@@ -38,7 +38,7 @@ function WordList(props) {
     }
     console.log(bodyOfVerb);
     switch(props.irregularity){
-        case "0": break;
+        case "0": bodyOfVerb2=bodyOfVerb;
         case "1": bodyOfVerb2=bodyOfVerb.replace("e","ie"); break;
         case "2": bodyOfVerb2=bodyOfVerb.replace("o","ue"); break;
         case "3": bodyOfVerb2=bodyOfVerb.replace("e","i"); break;
